@@ -11,7 +11,16 @@ public class LineCompute {
 public static void main(String[] args) {
    LineCompute obj = new LineCompute();
    Double line1=obj.distanceCal(1,1,1,1);
-   Double line2=obj.distanceCal(1,2,3,4);
-   System.out.println("line1 and line 2 are equal.True or False :" +line1.equals(line2));
+   Double line2=obj.distanceCal(1,1,1,1);
+   if(Double.compare(line1,line2)==0)
+   {
+	   System.out.println("Two lines are equal");
+   }
+   else if(Double.compare(line1, line2) < 0)
+   {
+	   System.out.println("Line1 is less than Line2");
+   }
+   else
+	   System.out.println("Line1 is Greater than Line2");
 }
 }
